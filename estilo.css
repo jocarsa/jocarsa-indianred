@@ -1,0 +1,341 @@
+/* estilo.css */
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: Ubuntu,"Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    color: #444;
+    word-break: break-all;
+}
+
+#wpwrap {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* Sidebar (Left Admin Menu) */
+#adminmenu {
+    background: #23282d;
+    width: 220px;
+    min-height: 100vh;
+    color: #eee;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+#adminmenu h2 {
+    color: #ccc;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px 20px 10px;
+    font-weight: 600;
+}
+#adminmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#adminmenu li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+#adminmenu a {
+    display: block;
+    padding: 8px 20px;
+    color: #eee;
+    text-decoration: none;
+    font-size: 13px;
+    border-left: 4px solid transparent;
+}
+#adminmenu a:hover {
+    background: #191e23;
+    border-left: 4px solid forestgreen;
+}
+#adminmenu .current {
+    border-left: 4px solid forestgreen;
+    background: #191e23;
+    color: #fff;
+}
+
+/* Header Bar (WordPress-style top bar) */
+#wpadminbar {
+    background: indianred;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#wpadminbar .logo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+#wpadminbar .logo img {
+    width: 50px;
+    margin-right: 8px;
+}
+#wpadminbar .logout-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+#wpadminbar .logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+.wrap {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width:80%;
+}
+
+.wrap h1, .wrap h2, .wrap h3 {
+    font-weight: 600;
+    margin-top: 0;
+}
+.wrap h1 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.wrap h2 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+.wrap h3 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+.form-section, .table-section {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.form-section div, .edit-form div {
+    margin-bottom: 10px;
+}
+form label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    vertical-align: top;
+}
+form input[type="text"] {
+    width: 300px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+form textarea {
+    width: 300px;
+    height: 80px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: Ubuntu,"Open Sans", sans-serif;
+}
+form input[type="submit"] {
+    padding: 8px 15px;
+    background: forestgreen;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+form input[type="submit"]:hover {
+    background: #1b6a1b;
+}
+.select-table-form {
+    margin-bottom: 20px;
+}
+.select-table-form select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.select-table-form input[type="submit"] {
+    padding: 6px 15px;
+    background: forestgreen;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.select-table-form input[type="submit"]:hover {
+    background: #1b6a1b;
+}
+
+.table-container {
+    overflow: auto;
+    margin-top: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+}
+table th {
+    background: #fafafa;
+    font-weight: bold;
+    text-align: left;
+}
+.action-links a {
+    margin-right: 10px;
+    color: forestgreen;
+    text-decoration: none;
+    font-weight: bold;
+}
+.action-links a:hover {
+    text-decoration: underline;
+}
+.select-table-form label {
+    width: 200px;
+}
+
+/* ================= LOGIN FORM STYLES ================== */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 50px); /* minus top bar height */
+}
+.login-container {
+    width: 400px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: left;
+}
+.login-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.login-container .error {
+    color: #fff;
+    background: indianred;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.login-container .login-form {
+    margin-top: 20px;
+}
+.login-container .login-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.login-container .login-form input[type="text"],
+.login-container .login-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing:border-box;
+}
+.login-container .login-form input[type="submit"] {
+    padding: 8px 15px;
+    background: forestgreen;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.login-container .login-form input[type="submit"]:hover {
+    background: #1b6a1b;
+}
+/* estilo.css */
+
+/* Existing styles... */
+
+/* Additional styles for the database grid */
+.db-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.db-card {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align:center;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+.db-card img{
+	width:50%;
+	margin:auto;
+}
+.db-card p{
+	text-decoration:none;
+	color:black;
+}
+.db-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.db-card a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+#supercontenedor{
+	width:100%;
+	height:450px;
+	overflow-x:scroll;
+}
+#charts-container{
+	width:9000px;
+}
+
